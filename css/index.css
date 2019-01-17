@@ -146,7 +146,7 @@ img {
 h1,
 h2,
 h3 {
-  margin: 15px 0;
+  margin: 20px auto;
   font-weight: bold;
 }
 .container {
@@ -157,6 +157,7 @@ h3 {
 .container header {
   display: flex;
   flex-direction: row-reverse;
+  width: 800px;
   margin: 20px 0;
 }
 .container header nav a {
@@ -166,6 +167,11 @@ h3 {
   font-size: 12px;
   font-weight: bold;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
 .top-content p {
   border-top: 1px solid lightgray;
   padding-top: 20px;
@@ -173,6 +179,7 @@ h3 {
 .top-content {
   background-color: #e9f0f5;
   padding: 40px 20px;
+  max-width: 800px;
   margin: 0;
 }
 .top-content button {
@@ -188,13 +195,17 @@ h3 {
 .text-content h1 {
   font-size: 50px;
 }
-.text-content .mid-section {
+.mid-content .text-content {
   display: flex;
-  flex-direction: column;
-  border: 1px solid red;
-  width: 400px;
-  padding: 10px;
-  margin: 0;
+}
+.mid-section {
+  width: 800px;
+}
+.mid-section h2 {
+  font-size: 30px;
+}
+.mid-section h3 {
+  font-size: 20px;
 }
 .text-content .mid-section:last-child {
   flex-direction: column;
@@ -203,6 +214,9 @@ h3 {
   border: 1px solid lightgray;
   padding: 10px;
   margin: 0 10px 0 0;
+}
+.bottom-content h2 {
+  font-size: 20px;
 }
 table {
   border-top: 1px solid lightgray;
@@ -213,8 +227,8 @@ tr {
 }
 th,
 td {
-  padding: 15px;
-  width: 200px;
+  padding: 10px;
+  width: 500px;
 }
 table tr:nth-child(2) {
   background-color: lightgray;
@@ -222,12 +236,19 @@ table tr:nth-child(2) {
 table tr:nth-child(4) {
   background-color: lightgray;
 }
+table td:first-child {
+  font-weight: bold;
+}
+table th {
+  font-weight: bold;
+}
 footer {
   text-align: center;
   background-color: darkgray;
   margin: 20px auto;
-  width: 100%;
-  padding: 20px;
+  max-width: 800px;
+  padding: 10px;
+  display: block;
 }
 footer h3 {
   color: white;
