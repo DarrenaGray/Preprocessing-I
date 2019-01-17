@@ -49,11 +49,162 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+// General Styles
+
 * {
-    box-sizing: border-box;
+    .box-sizing();
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: Arial, sans-serif;
 }
 
+img {
+	display: inline;
+	border-radius: 5px;
+	width: 200px;
+	height: 200px;
+}
+
+h1, h2, h3 {
+	margin: 15px 0;
+	font-weight: bold;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 10px;
+
+	header {
+		display: flex;
+		flex-direction: row-reverse;
+		margin: 20px 0;
+
+		nav {
+			a {
+				text-decoration: none;
+				color: @fontcolor;
+				margin: 0 15px;
+				font-size: 12px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.top-content {
+	p {
+		border-top: 1px solid lightgray;
+		padding-top: 20px;
+	}
+}
+
+
+.top-content {
+	background-color: rgb(233, 240, 245);
+	padding: 40px 20px;
+	margin: 0;
+
+	button {
+		margin: 20px 0;
+		background-color: gray;
+		color: white;
+		padding: 10px 20px;
+		font-size: 14px;
+		font-weight: bold;
+		border-radius: 5px;
+		box-shadow: none;
+	}
+}
+
+
+.text-content {
+	h1 {
+		font-size: 50px;
+	}
+}
+
+.text-content {
+	
+	.mid-section {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid red;
+		width: 400px;
+		padding: 10px;
+		margin: 0;
+	}
+}
+
+.text-content {
+	.mid-section:last-child {
+		flex-direction: column;
+
+		ul {
+			
+			li {
+				border: 1px solid lightgray;
+				padding: 10px;
+				margin: 0 10px 0 0;
+			}
+		}
+
+	}
+}
+
+table {
+	.bordered;
+}
+
+tr {
+	text-align: left;
+	.bordered;
+}
+
+th, td {
+	padding: 15px;
+	width: 200px;
+	// background-color: @table-bg;
+}
+
+table tr:nth-child(2) {
+	background-color: @table-bg;
+}
+
+table tr:nth-child(4) {
+	background-color: @table-bg;
+}
+
+
+footer {
+	text-align: center;
+	background-color: darkgray;
+	margin: 20px auto;
+	width: 100%;
+	padding: 20px;
+	
+	h3 {
+		color: white;
+	}
+}
+
+
+// Hello 
+
+// Variables
+@fontcolor: black;
+@table-bg:  lightgray;
+
+// Mixins
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
+.bordered() {
+	border-top: 1px solid lightgray;
+}
